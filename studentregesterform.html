@@ -4,57 +4,79 @@
     <meta charset="UTF-8">
     <title>Đăng ký học viên</title>
     <style>
-        th {color: blue; text-align: left }
+        th {
+            color: blue;
+            text-align: left;
+            vertical-align: top;
+            width: 100px;
+            padding-left: 10px
+        }
+
+        div {
+            width: auto;
+            height: auto;
+        }
+
+        table {
+            background: khaki;
+
+        }
     </style>
 </head>
 <body>
-<style>form{background: khaki </style>
-<form>
-  <H1 style="background: aquamarine;color:blue">ĐĂNG KÝ HỌC VIÊN</H1>
-<table>
-    <tr>
-        <th>Họ và tên</th>
-        <td> <label><input type="text" name="yourname" size="40"></label></td>
-    </tr>
-    <tr>
-        <th>Ngày sinh</th>
-        <td> <label><input type="text" name="Birth" size="20"></label></td>
-    </tr>
-    <tr>
-        <th>Giới tính</th>
-        <td> <label><input type="radio"> Nam</label>
-            <label><input type="radio"> Nữ</label>
-        </td>
-    </tr>
-    <tr>
-        <th>Địa chỉ</th>
-        <td > <label><input type="text" name="address" ></label></td>
-    </tr>
-    <tr>
-        <th>Lớp</th>
-        <td> <select name="Class" >
-                <option value="Chọn lớp">Chọn lớp</option>
-                <option value="Lớp 1">Lớp 1</option>
-            <option value="Lớp 2">Lớp 2</option>
-            <option value="Lớp 3">Lớp 3</option>
-            <option value="Lớp 4">Lớp 4</option>
-        </td>
-    </tr>
-    <tr>
-        <th>Email</th>
-        <td> <label><input type="text" name="email" size="40"></label></td>
-    </tr>
-    <tr>
-        <th>Điện thoại</th>
-        <td> <label><input type="text" name="Phone number" size="40"></label></td>
-    </tr>
-    <tr>
-        <th></th>
-        <td> <label><input type="submit" name="Register" value="Đăng ký" size="20"></label>
-             <label><input type="submit" name="Reset" value="Nhập lại" size="20"></label>
-        </td>
-    </tr>
-</table>
-</form>
+<div align="center">
+    <table>
+        <tr>
+            <td colspan="2">
+                <H1 style="background: aquamarine;color:blue; font-size: 20px; margin: 10px; ">ĐĂNG KÝ HỌC VIÊN</H1>
+            </td>
+
+        </tr>
+        <tr>
+            <th>Họ và tên</th>
+            <td><label><input type="text" name="yourname" size="40"></label></td>
+        </tr>
+        <tr>
+            <th>Ngày sinh</th>
+            <td><label><input type="text" name="Birth" size="20"></label></td>
+        </tr>
+        <tr>
+            <th>Giới tính</th>
+            <td><label><input type="radio"> Nam</label>
+                <label><input type="radio"> Nữ</label>
+            </td>
+        </tr>
+        <tr>
+            <th>Địa chỉ</th>
+            <td><label><input type="text" name="address" style="height: 50px"></label></td>
+        </tr>
+        <tr>
+            <th>Lớp</th>
+            <td>
+                <select name="Class">
+                    <option value="Chọn lớp">Chọn lớp</option>
+                    <option value="Lớp 1">Lớp 1</option>
+                    <option value="Lớp 2">Lớp 2</option>
+                    <option value="Lớp 3">Lớp 3</option>
+                    <option value="Lớp 4">Lớp 4</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td><label><input type="text" name="email" size="40"></label></td>
+        </tr>
+        <tr>
+            <th>Điện thoại</th>
+            <td><label><input type="text" name="Phone number" size="40"></label></td>
+        </tr>
+        <tr>
+            <th></th>
+            <td><label><input type="submit" name="Register" value="Đăng ký" size="20"></label>
+                <label><input type="submit" name="Reset" value="Nhập lại" size="20"></label>
+            </td>
+        </tr>
+    </table>
+</div>
 </body>
 </html>
