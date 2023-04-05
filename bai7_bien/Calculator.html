@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+<form>
+    <h1>
+        Calculator
+    </h1>
+    <input name="ThefirtNumber" id="st">
+    <input name="ThesecondNumber" id="nd"> <br><br>
+    <button type="button" onclick="add()">Addition(+)</button>
+    <button type="button" onclick="sub()">Subtraction(-)</button>
+    <button type="button" onclick="mult()">Multiplication(x)</button>
+    <button type="button" onclick="divi()">Division(/)</button>
+    <p>Result Division: <span id="result"> </span></p>
+    <script>
+        function add() {
+            const fnum = parseInt(document.querySelector("#st").value)
+            const snum = parseInt(document.querySelector("#nd").value)
+            // alert('kieu du lieu cua fnum la ' + typeof (fnum))
+
+            const aresult = fnum + snum
+            const additionresult = document.querySelector("#result")
+            if (additionresult) additionresult.innerHTML = aresult
+        }
+
+        function sub() {
+            const fnum = document.querySelector("#st").value
+            const snum = document.querySelector("#nd").value
+
+            const sresult = fnum - snum
+            const additionresult = document.querySelector("#result")
+            if (additionresult) additionresult.innerHTML = sresult
+        }
+
+        function mult() {
+            const fnum = document.querySelector("#st").value
+            const snum = document.querySelector("#nd").value
+
+            const mresult = fnum * snum
+            const additionresult = document.querySelector("#result")
+            if (additionresult) additionresult.innerHTML = mresult
+        }
+
+        function divi() {
+            const fnum = document.querySelector("#st").value
+            const snum = document.querySelector("#nd").value
+            const dresult = fnum / snum
+            const additionresult = document.querySelector("#result")
+            if (additionresult) additionresult.innerHTML = dresult
+        }
+    </script>
+</form>
+
+</body>
+</html>
