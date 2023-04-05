@@ -5,40 +5,17 @@
     <title>Title</title>
 </head>
 <body>
-<!--<button type="button" onclick="test();">click me </button>-->
-<button type="button" onclick="test()">Click Me!</button>
-
+Name: <input placeholder="name" id="name">
+<button onclick="show()">Show</button>
 <script>
-    function test() {
-         // let i=10;
-        // var f=20.5
-        //  document.write("i= " +i)
-        // document.write("f= "+f)
+    function show() {
+        let inputname = document.getElementById('name');
+        inputname.value= "toan"
+        alert(inputname.value);
 
 
-          let x=5;
-          let y = 7;
-          let z=++x+x--+y++
-        document.write("x= " + x);
-        document.write("y= " + y);
-        document.write("z= " + z);
+
     }
-
-        // Var        f = 20.5;
-    //     Var        b = true;
-    //     Var        s = 'Hà Nội';
-    //       Let i = 10
-    //      Document.write('i= '+ i);
-    //     Document.write('<br>');
-    //     Document.write('f= ' + f);
-    //     Document.write('<br>');
-    //     Document.write('b= ' + b);
-    //     Document.write('<br>');
-    //     Document.write('s= ' + s);
-    // }
-// function test() {
-//     document.write('Hello world!')
-// }
 </script>
 </body>
 </html>

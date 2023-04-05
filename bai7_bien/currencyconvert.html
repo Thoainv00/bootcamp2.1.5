@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyen doi tien te</title>
+</head>
+<body>
+
+<table>
+    <tr>
+        <th> Amount</th>
+        <th> &nbsp</th>
+        <th> From Currency</th>
+        <th> &nbsp</th>
+        <th> To Currency</th>
+
+    </tr>
+    <tr>
+        <td>
+<!--            <label for="amount">-->
+<!--                amount-->
+<!--            </label>-->
+            <input type="text" name="amount" id="amount">
+        </td>
+        <td> &nbsp</td>
+        <td>
+            <select name="nation" id="from">
+                <option name=[currency][vnd] data-c-symbol="vnd" value=1> VietNam</option>
+                <option name=usd data-c-symbol="$" value=23000> US</option>
+            </select>
+        </td>
+        <td> &nbsp</td>
+        <td>
+            <select name="nation" id="to">
+                <option value=1> VietNam</option>
+                <option value=23000> US</option>
+            </select>
+        </td>
+        <td>
+            <button type="button" onclick="convert()">Convert</button>
+        </td>
+    </tr>
+</table>
+<p > Result: <span id="result"> </span></p>
+
+
+
+<script>
+    function convert() {
+        const x = document.getElementById("from").value
+        const y = document.getElementById("to").value
+        const a = document.getElementById("amount").value
+        const result = a * x / y
+        const resultElement = document.querySelector("#result")
+        console.log(result, document.querySelector("#from option:checked").dataset["c-symbol"])
+        if(resultElement) resultElement.innerHTML = result + document.querySelector("#from option:checked").dataset.cSymbol
+    }
+
+    // function convert() {
+    //     if (#to = VietNam){
+    // let
+    // }
+    // }
+</script>
+
+</body>
+</html>
