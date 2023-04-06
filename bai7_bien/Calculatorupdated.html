@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+<form>
+    <h1>
+        Calculator
+    </h1>
+    <input name="ThefirtNumber" id="st">
+    <input name="ThesecondNumber" id="nd"> <br><br>
+    <button type="button" onclick="add(1)">Addition(+)</button>
+    <button type="button" onclick="add(2)">Subtraction(-)</button>
+    <button type="button" onclick="add(3)">Multiplication(x)</button>
+    <button type="button" onclick="add(4)">Division(/)</button>
+    <p>Result Division: <span id="result"> </span></p>
+    <script>
+        let x
+        function add(x) {
+            const fnum = parseInt(document.querySelector("#st").value)
+            const snum = parseInt(document.querySelector("#nd").value)
+            // alert('kieu du lieu cua fnum la ' + typeof (fnum))
+            switch (x) {
+                case 1: {
+                    const aresult = fnum + snum
+                    const additionresult = document.querySelector("#result")
+                    if (additionresult) additionresult.innerHTML = aresult
+                    break
+                }
+                    ;
+
+                case 2
+                : {
+                    const sresult = fnum - snum
+                    const additionresult = document.querySelector("#result")
+                    if (additionresult) additionresult.innerHTML = sresult
+                    break
+                }
+                    ;
+
+                case 3: {
+                    const mresult = fnum * snum
+                    const additionresult = document.querySelector("#result")
+                    if (additionresult) additionresult.innerHTML = mresult
+                    break
+                }
+                    ;
+
+                case 4: {
+                    const dresult = fnum / snum
+                    const additionresult = document.querySelector("#result")
+                    if (additionresult) additionresult.innerHTML = dresult
+                    break
+                }
+                    ;
+            }
+            ;
+        }
+    </script>
+</form>
+
+</body>
+</html>
