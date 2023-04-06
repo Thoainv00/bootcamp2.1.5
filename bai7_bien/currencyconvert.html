@@ -17,16 +17,16 @@
     </tr>
     <tr>
         <td>
-<!--            <label for="amount">-->
-<!--                amount-->
-<!--            </label>-->
+            <!--            <label for="amount">-->
+            <!--                amount-->
+            <!--            </label>-->
             <input type="text" name="amount" id="amount">
         </td>
         <td> &nbsp</td>
         <td>
             <select name="nation" id="from">
-                <option   value=1> VietNam</option>
-                <option   value=23000> US</option>
+                <option value=1> VietNam</option>
+                <option value=23000> US</option>
             </select>
         </td>
         <td> &nbsp</td>
@@ -41,8 +41,7 @@
         </td>
     </tr>
 </table>
-<p ><span id="result"> </span></p>
-
+<p><span id="result"> </span></p>
 
 
 <script>
@@ -53,7 +52,7 @@
         const result = a * x / y
         const resultElement = document.querySelector("#result")
         // console.log(result, document.querySelector("#from option:checked").dataset["c-symbol"])
-        if(resultElement) resultElement.innerHTML = document.querySelector("#to option:checked").dataset.symbol  + result + document.querySelector("#to option:checked").dataset.cSymbol
+        if (resultElement) resultElement.innerHTML = document.querySelector("#to option:checked").dataset.symbol + result + document.querySelector("#to option:checked").dataset.cSymbol
     }
 
     // function convert() {
