@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BMIIndex</title>
+    <style>
+        th {
+            width: 100px;
+            text-align: left
+        }
+
+        input {
+            width: 200px
+        }
+    </style>
+</head>
+<body>
+<div>
+    <table>
+        <tr>
+            <th colspan="2" style="font-size: 20px;text-align:center">Body mass index-BMI</th>
+        </tr>
+        <tr>
+            <th>Weight(Kg)</th>
+            <td><input type="text" placeholder="Enter Weight" id="We"></td>
+        </tr>
+        <tr>
+            <th>Height(M)</th>
+            <td><input type="text" placeholder="Enter Height" id="He" onchange="BMIcal()"></td>
+        </tr>
+        <tr>
+            <th>
+                BMI: <span id="BMI"></span>
+            </th>
+            <th style="width: 200px">
+                Interpretation: <span id="In"></span>
+            </th>
+        </tr>
+    </table>
+</div>
+<script>
+    function BMIcal() {
+        const wei = parseFloat(document.querySelector("#We").value)
+        const hei = parseFloat(document.querySelector("#He").value)
+        let BMI = wei / (hei * hei)
+        document.querySelector("#BMI").innerHTML = BMI.toFixed(2)
+
+        // numb.toFixed(degit) Trả về giá trị là chuỗi
+
+        let Inter = (BMI < 18.5) ?
+            'Underweight' :
+            ((BMI >= 18.5) && (BMI < 25.0)) ?
+                'Normal' :
+                ((BMI >= 25.0) && (BMI < 30.0)) ?
+                    'Overweight' :
+                    (BMI >= 30.0) ?
+                        'Obese' : ''
+
+        document.querySelector("#In").innerHTML = Inter
+    }
+</script>
+</body>
+</html>
