@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiem tra nam nhuan 3</title>
+</head>
+<body>
+<script>
+  let year = parseInt(prompt("Enter your year:"))
+  let isleapyear = false
+  let isdivisionby4 = year%4 == 0
+  if (isdivisionby4) {
+    let isdivisionby100 = year%100 == 0
+    if (isdivisionby100) {
+      let  isdivisionby400 = year%400 == 0
+      if (isdivisionby400){
+        isleapyear = true
+      }
+    } else {
+      isleapyear = true
+    }
+  }
+  if (isleapyear) {
+    alert(year+' is a leap year')
+  } else {
+    alert(year+' is not a leap year')
+  }
+</script>
+</body>
+</html>
