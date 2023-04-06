@@ -25,15 +25,15 @@
         <td> &nbsp</td>
         <td>
             <select name="nation" id="from">
-                <option name=[currency][vnd] data-c-symbol="vnd" value=1> VietNam</option>
-                <option name=usd data-c-symbol="$" value=23000> US</option>
+                <option   value=1> VietNam</option>
+                <option   value=23000> US</option>
             </select>
         </td>
         <td> &nbsp</td>
         <td>
             <select name="nation" id="to">
-                <option value=1> VietNam</option>
-                <option value=23000> US</option>
+                <option name=[currency][vnd] data-c-symbol="vnd" value=1> VietNam</option>
+                <option name=usd data-c-symbol="$" value=23000> US</option>
             </select>
         </td>
         <td>
@@ -53,7 +53,7 @@
         const result = a * x / y
         const resultElement = document.querySelector("#result")
         // console.log(result, document.querySelector("#from option:checked").dataset["c-symbol"])
-        if(resultElement) resultElement.innerHTML = result + document.querySelector("#from option:checked").dataset.cSymbol
+        if(resultElement) resultElement.innerHTML = document.querySelector("#to option:checked").dataset.cSymbol + result
     }
 
     // function convert() {
