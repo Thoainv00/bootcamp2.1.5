@@ -3,20 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>The number of day in a month</title>
+    <style>
+        /*#year {visibility: hidden}*/
+        #cal {
+            visibility: hidden
+        }
+    </style>
 </head>
 <body>
 <input type="text" placeholder="Tháng" id="Month">
 <button type="button" onclick="dayinmonth()">Tính số ngày</button>
+<input type="text" placeholder="Năm" id="year" style="visibility: hidden" onchange="tinh_ngay()">
+<!--<button type="button" onclick="dayinmonth()" id = "cal" style="visibility: hidden">Tính số ngày</button>-->
+
+
 <p id="result"></p>
+
+
 <script>
     function dayinmonth() {
         const month = parseInt(document.querySelector("#Month").value)
 
         switch (month) {
-            case 2: {
-                document.querySelector("#result").innerHTML = 'Tháng 2 có 28 hoặc 29 ngày';
-                break
-            }
             case 1:
             case 3:
             case 5:
@@ -34,7 +42,43 @@
                 document.querySelector("#result").innerHTML = 'Tháng ' + month + ' có 30 ngày';
                 break
             }
+            case 2: {
+                // document.querySelector("#result").innerHTML = 'Tháng 2 có 28 hoặc 29 ngày';
+                let x = document.querySelector("#year")
+                x.style.visibility = 'visible'
+
+                // let z = document.querySelector("#year")
+                // if z.onchange {
+                //     let y = parseInt(document.querySelector("#year").value)
+
+
+                // if ((y != '') && (y == 2023)) {
+                //     document.querySelector("#result").innerHTML = 'Tháng 2 năm 2023 có 28 ngày'
+                //
+                // }
+                // }
+                break
+            }
         }
+    }
+
+    function tinh_ngay() {
+        let x = parseInt(document.querySelector("#year").value)
+        if (x % 4 == 0) {
+            if (x % 100 == 0) {
+                if (x % 400 == 0) {
+                    document.querySelector("#result").innerHTML = "Tháng 2 năm " + x + " có 29 ngày"
+                } else {
+                    document.querySelector("#result").innerHTML = "Tháng 2 năm " + x + " có 28 ngày"
+                }
+            } else {
+                document.querySelector("#result").innerHTML = "Tháng 2 năm " + x + " có 29 ngày"
+            }
+        } else {
+            document.querySelector("#result").innerHTML = "Tháng 2 năm " + x + " có 28 ngày"
+
+        }
+
     }
 </script>
 </body>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Problem7</title>
+</head>
+<body>
+
+<script>
+
+    alert('Giai phuong trinh bac hai co dang ax^2+bx+c')
+
+    const a = parseFloat(prompt('Nhap gia tri he so a: '))
+    const b = parseFloat(prompt('Nhap gia tri he so b: '))
+    const c = parseFloat(prompt('Nhap gia tri he so c: '))
+
+    if (a == 0)
+        if (b == 0)
+            if (c == 0) {
+                alert('Phuong trinh ' + a + 'x^2+' + b + 'x+' + c + '=0 co vo so nghiem')
+            } else {
+                alert('Phuong trinh ' + a + 'x^2+' + b + 'x+' + c + '=0 vo nghiem')
+            }
+        else {
+            let x = c / b
+            alert('Phuong trinh ' + a + 'x^2+' + b + 'x+' + c + '=0 co nghiem la ' + x)
+        }
+    else {
+        const del = b * b - 4 * a * c
+        if (del < 0) {
+            alert('Phuong trinh ' + a + 'x^2+' + b + 'x+' + c + '=0 vo nghiem')
+        } else if (del == 0) {
+            let x1 = -b / (2 * a)
+            alert('Phuong trinh ' + a + 'x^2+' + b + 'x+' + c + '=0 co nghiem duy nhat la: ' + x1)
+        } else {
+            let x1
+            let x2
+            x1 = (-b + Math.sqrt(del)) / (2 * a)
+            x2 = (-b - Math.sqrt(del)) / (2 * a)
+            alert('Phuong trinh ' + a + 'x^2+' + b + 'x+' + c + '=0 co hai nghiem phan biet')
+            alert('Nghiem thu nhat cua phuong trinh la: ' + x1.toFixed(2))
+            alert('Nghiem thu hai cua phuong trinh la: ' + x2.toFixed(2))
+        }
+
+    }
+
+    alert('Nghiem thu nhat la' + x1)
+    alert('Nghiem thu nhat la' + x2)
+    // +<sup>2</sup>
+    // let x = <sup>2</sup>
+</script>
+</body>
+</html>

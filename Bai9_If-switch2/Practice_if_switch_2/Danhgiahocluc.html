@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Danhgiahocluc</title>
+</head>
+<body onload="if2()">
+
+<script>
+    function if1() {
+        let x = parseFloat(prompt('Nhập điểm của bạn!'))
+        let rank = (x >= 8) ?
+            'Giỏi' : ((x >= 6.5) && (x < 8)) ?
+                'Khá' : ((x >= 4.5) && (x < 6.5)) ?
+                    'Trung bình' : (x < 4.5) ?
+                        'Yếu' : ''
+        alert('Điểm của bạn được xếp hạng là ' + rank)
+    }
+
+    function if2() {
+        let x = parseFloat(prompt('Nhập điểm của bạn!'))
+        let rank
+
+        switch (true) {
+            case (x >= 8): {
+                rank = 'Giỏi'
+                // alert('Điểm của bạn được xếp hạng là Giỏi')
+                break
+            }
+            case ((x >= 6.5) && (x < 8)): {
+                rank = 'Khá'
+                // alert('Điểm của bạn được xếp hạng là Khá')
+                break
+            }
+            case ((x >= 4.5) && (x < 6.5)): {
+                rank = 'Trung bình'
+                // alert('Điểm của bạn được xếp hạng là Trung bình')
+                break
+            }
+            case (x < 4.5): {
+                rank = 'Yếu'
+                // alert('Điểm của bạn được xếp hạng là Yếu')
+                break
+            }
+        }
+        alert('Điểm của bạn được xếp hạng là ' + rank)
+    }
+</script>
+</body>
+</html>

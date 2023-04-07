@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Problem6</title>
+</head>
+<body>
+<script>
+    alert('giai phuong trinh bac nhat co dang ax+b=0')
+    const a = parseFloat(prompt('nhap so a: '))
+    const b = parseFloat(prompt('Nhap so b: '))
+    if (a == 0)
+        if (b == 0)
+            alert('Phuong trinh co vo so nghiem')
+        else
+            alert('Phuong trinh vo nghiem')
+    else {
+        const x = -b / a
+        alert('Phuong trinh co nghiem la: ' + x.toFixed(2))
+    }
+</script>
+</body>
+</html>

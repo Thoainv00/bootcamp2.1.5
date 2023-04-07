@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giá điện</title>
+</head>
+<body>
+<script>
+    let x = parseInt(prompt('Nhập số điện tháng tiêu dùng nhà bạn: '))
+    const rank1 = 1678
+    const rank2 = 1734
+    const rank3 = 2014
+    const rank4 = 2536
+    const rank5 = 2834
+    const rank6 = 2929
+    let tiendien
+    switch (true) {
+        case (x >= 0) && (x <= 50):
+            tiendien = x * rank1
+            break
+        case (x >= 51) && (x <= 100):
+            tiendien = (x - 51) * rank2 + 50 * rank1
+            break
+        case (x >= 101) && (x <= 200):
+            tiendien = (x - 101) * rank3 + 49 * rank2 + 50 * rank1
+            break
+        case  (x >= 201) && (x <= 300):
+            tiendien = (x - 201) * rank4 + 99 * rank3 + 49 * rank2 + 50 * rank1
+            break
+        case  (x >= 301) && (x <= 400):
+            tiendien = (x - 301) * rank5 + 99 * rank4 + 99 * rank3 + 49 * rank2 + 50 * rank1
+            break
+        case  (x >= 401):
+            tiendien = (x - 401) * rank6 + 99 * rank5 + 99 * rank4 + 99 * rank3 + 49 * rank2 + 50 * rank1
+            break
+    }
+    alert('Tiền điện tháng này là ' + tiendien)
+</script>
+</body>
+</html>

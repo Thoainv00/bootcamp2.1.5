@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính thuế giá trị gia tăng</title>
+</head>
+<body>
+<script>
+    const income = parseInt(prompt('Nhập thu nhập của bạn (vnđ): '))
+    const rank1 = 0.05
+    const rank2 = 0.1
+    const rank3 = 0.15
+    const rank4 = 0.2
+    const rank5 = 0.25
+    const rank6 = 0.3
+    const rank7 = 0.35
+    let Tax
+    switch (true) {
+        case (income <= 5000000):
+            tax = income * rank1
+            break
+        case ((income > 5000000) && (income <= 10000000)):
+            tax = income * rank2 - 250000
+            break
+        case ((income > 10000000) && (income <= 18000000)):
+            tax = income * rank3 - 750000
+            break
+        case ((income > 18000000) && (income <= 32000000)):
+            tax = income * rank4 - 1650000
+            break
+        case  ((income > 32000000) && (income <= 52000000)):
+            tax = income * rank5 - 3250000
+            break
+        case ((income > 52000000) && (income <= 80000000)):
+            tax = income * rank6 - 5850000
+            break
+        case (income > 80000000):
+            tax = income * rank7 - 9850000
+            break
+    }
+    alert('Số thuế bạn phải nộp là: ' + tax + 'vnđ')
+</script>
+</body>
+</html>
