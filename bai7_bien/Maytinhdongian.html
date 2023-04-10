@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style> div {width: 150px; }
+            /*tr {width:35px;height: 21.2px}*/
+             /*padding :0*/
+            td {border:0; margin: 0; width: 100%}
+            button { width:100%}
+    </style>
+</head>
+<body>
+<div align =  "center">
+
+<table>
+    <tr>
+        <td colspan="4"> <input id="view"> </td> </tr>
+    <tr>
+        <td>
+            <button type="button" value="7" onclick="inputValue(this.value)" >7</button>
+        </td>
+        <td>
+            <button type="button" value="8" onclick="inputValue(this.value)">8</button>
+        </td>
+        <td>
+            <button type="button" value="9" onclick="inputValue(this.value)">9</button>
+        </td>
+        <td>
+            <button type="button" value="+" onclick="inputValue(this.value)">+</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button type="button" value="4" onclick="inputValue(this.value)">4</button>
+        </td>
+        <td>
+            <button type="button" value="5" onclick="inputValue(this.value)">5</button>
+        </td>
+        <td>
+            <button type="button" value="6" onclick="inputValue(this.value)">6</button>
+        </td>
+        <td>
+            <button type="button" value="-" onclick="inputValue(this.value)">-</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button type="button" value="1" onclick="inputValue(this.value)">1</button>
+        </td>
+        <td>
+            <button type="button" value="2" onclick="inputValue(this.value)">2</button>
+        </td>
+        <td>
+            <button type="button" value="3" onclick="inputValue(this.value)">3</button>
+        </td>
+        <td>
+            <button type="button" value="*" onclick="inputValue(this.value)">*</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button type="button" onclick="xoa()">AC</button>
+        </td>
+        <td>
+            <button type="button" value="0" onclick="inputValue(this.value)">0</button>
+        </td>
+        <td>
+            <button type="button" value="=" onclick="result()">=</button>
+        </td>
+        <td>
+            <button type="button" value="/" onclick="inputValue(this.value)">/</button>
+        </td>
+    </tr>
+</table>
+</div>
+<script>
+    let view = document.querySelector("#view")
+    function inputValue(value) {
+        // let view = document.querySelector("#view")
+        view.value += value
+    }
+    function result() {
+        // let view = document.querySelector("#view")
+        let result = eval(view.value)
+        view.value = result
+    }
+    function xoa() {
+        // let view = document.querySelector("#view")
+        view.value = ""
+    }
+
+
+</script>
+</body>
+</html>
