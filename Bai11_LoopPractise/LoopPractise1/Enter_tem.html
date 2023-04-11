@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập nhiệt độ</title>
+</head>
+<body>
+<script>
+  let x = parseInt(prompt("Nhập nhiệt độ hiện tại: "))
+  while (x>100 || x<20) {
+    if (x > 100) {
+      alert("Hãy giảm nhiệt độ!")
+      x = parseInt(prompt("Nhập nhiệt độ hiện tại: "))
+    }
+    if (x < 20) {
+      alert("Hãy tăng nhiệt độ!")
+      x = parseInt(prompt("Nhập nhiệt độ hiện tại: "))
+    }
+  }
+   alert("Nhiệt độ phòng hiện tại là: " +x+ " độ" )
+
+
+</script>
+</body>
+</html>

@@ -13,24 +13,25 @@
     function start() {
         let num1 = prompt("nhập số trong khoảng từ:");
         let num2 = prompt("đến");
-        let xnum = parseInt(randomnumber(num1,num2))
+        let xnum = parseInt(randomnumber(num1, num2))
         let yournum = prompt("Mời bạn đoán");
         let count = 1
         // alert(xnum)
-        while (yournum!=xnum) {
+        while (yournum != xnum) {
             if (count <= 3) {
                 if (count == 3) break
-                alert("Bạn đã đoán sai rồi!");
+                aalert("Bạn đã đoán sai rồi!");
                 yournum = prompt("Cho phép bạn đoán lại");
                 count += 1
             }
         }
-        if (yournum!=xnum) {
+        if (yournum != xnum) {
             alert("Bạn đã đoán sai")
         } else
             alert("bạn đã đoán đúng")
     }
-    function randomnumber(min,max) {
-         return Math.floor(Math.random() * (max - min)) + min;
-     }
+
+    function randomnumber(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min;
+    }
 </script>

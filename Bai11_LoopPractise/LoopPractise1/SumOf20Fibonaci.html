@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tổng 20 số Fibonaci đầu tiên</title>
+</head>
+<body>
+<script>
+    let num1 = 0
+    let num2 = 1
+    let nextterm
+    let i
+    let count = 0
+    let total = 1
+    for (i = num1; i <= 19; i++) {
+        document.write(num1 + " ")
+        count += 1
+        nextterm = num1 + num2
+        total += nextterm
+        num1 = num2
+        num2 = nextterm
+    }
+    alert(nextterm)
+    alert(count)
+</script>
+</body>
+</html>

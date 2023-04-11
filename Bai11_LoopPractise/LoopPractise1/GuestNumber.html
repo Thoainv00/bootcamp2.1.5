@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<button onclick="start()">Chơi</button>
+
+</body>
+</html>
+<script>
+  function start() {
+    let num1 = prompt("nhập số trong khoảng từ:");
+    let num2 = prompt("đến");
+    let xnum = parseInt(randomnumber(num1, num2))
+    let yournum = prompt("Mời bạn đoán");
+    let count = 1
+    // alert(xnum)
+    while (yournum != xnum) {
+      if (count <= 3) {
+        if (count == 3) break
+        if (yournum > xnum) {
+          alert("Sai rồi, hãy nhập số nhỏ hơn")
+        }
+        if (yournum < xnum) {
+          alert("Sai rồi, hãy nhập số lớn hơn")
+        }
+        yournum = prompt("Cho phép bạn đoán lại");
+        count += 1
+      }
+    }
+    if (yournum != xnum) {
+      alert("Bạn đã đoán sai")
+    } else
+      alert("bạn đã đoán đúng")
+  }
+
+  function randomnumber(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
+</script>

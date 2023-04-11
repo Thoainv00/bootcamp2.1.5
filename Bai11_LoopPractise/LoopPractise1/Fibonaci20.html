@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị 20 số đầu tiên trong dãy Fibonaci</title>
+</head>
+<body>
+<script>
+    let num1 = 0
+    let num2 = 1
+    let nextterm
+    // let count = 0
+    for (i=num1; i < 20; i++ ) {
+        document.write(num1 + " ")
+        // count +=1
+        nextterm = num1+num2
+        num1=num2
+        num2=nextterm
+    }
+    // alert(count)
+
+</script>
+</body>
+</html>

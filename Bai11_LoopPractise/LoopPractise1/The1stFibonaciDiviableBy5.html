@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số đầu tiên của dãy fibonaci chia hết cho 5</title>
+</head>
+<body>
+<script>
+    let num1 = 0
+    let num2 = 1
+    let nextterm
+    let i
+    // let count = 0
+    for (i = num1; i >= 0; i++) {
+        // document.write(num1 + " ")
+
+// count +=1
+        nextterm = num1 + num2
+        num1 = num2
+        num2 = nextterm
+        if (nextterm % 5 === 0) {
+            document.write(nextterm)
+            break
+        }
+    }
+</script>
+</body>
+</html>
