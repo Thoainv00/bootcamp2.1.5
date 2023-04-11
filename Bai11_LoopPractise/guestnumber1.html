@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="start()">Chơi</button>
+
+</body>
+</html>
+<script>
+    function start() {
+        let num1 = prompt("nhập số trong khoảng từ:");
+        let num2 = prompt("đến");
+        // let xnum = randomnumber(num1,num2)
+        let yournum = prompt("Mời bạn đoán");
+        let count = 1
+        while (num1 > yournum || yournum > num2) {
+            if (count <= 3) {
+                if (count == 3) break
+                alert("Bạn đã trả lời sai rồi!");
+                yournum = prompt("Cho phép bạn nhập lại");
+                count += 1
+            }
+        }
+        if (num1 > yournum || yournum > num2) {
+            alert("Bạn đã đoán sai")
+        } else
+            alert("bạn đã đoán đúng")
+    }
+    // function randomnumber(min,max) {
+    //     return Math.floor(Math.random()*(max-min+1))+min
+    // }
+</script>
