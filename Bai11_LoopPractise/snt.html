@@ -8,7 +8,9 @@
 
 <script>
     let a = parseInt(prompt("Nhap so: "))
-  for (z = 2; z<= a; z++) {
+    let count=0
+    let z
+  for (z = 2; z>1; z++) {
    let check = true
     for (let i =2; i<z; i++) {
       if (z%i ==0) {
@@ -17,7 +19,9 @@
       }}
         if (check) {
             document.write(z+"<br>")
+            count +=1
         }
+        if (count>=a) { break}
      }
   // if (a == 2) {document.write("số " +a+" là số nguyên tố" )}
 
