@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In hình chữ nhật</title>
+</head>
+<body>
+<script>
+    let height = parseInt(prompt("Nhập chiều dài hình chữ nhật: "))
+    let width = parseInt(prompt("Nhập chiều rộng hình chữ nhật:"))
+    let i, j
+    let total=""
+    for (i = 1; i <= width; i++) {
+        j = 1;
+        // total = ""
+        for (j = 1; j <= height; j++) {
+            if ((i == 1) || (i == width))
+                total += "*"
+            else if ((j == 1) || (j == height)) total += "*"
+            else total += "&nbsp"+"&nbsp"
+        }
+        total += "<br>"
+    }
+   document.write(total)
+</script>
+</body>
+</html>

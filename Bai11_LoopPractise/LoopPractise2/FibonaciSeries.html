@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dãy Fibonaci</title>
+</head>
+<body>
+<script>
+    let num1 = 0
+    let num2 = 1
+    let nextterm = 0
+    let n = parseInt(prompt("Nhập số lượng phần tử Fibonaci muốn in ra"))
+    let i
+    for (i = num1; i <= n; i++) {
+        document.write(num1 + " ")
+        nextterm = num1 + num2
+        num1 = num2
+        num2 = nextterm
+    }
+</script>
+</body>
+</html>
