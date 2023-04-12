@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số lớn nhất trong dãy so</title>
+</head>
+<body>
+
+<script>
+  let a = [7,3,1,5,9]
+  let max = a[0]
+  let posi =0
+  for (let i=0;i<a.length;i++)
+  {
+    if (max<=a[i]) {
+      max = a[i]
+      posi = i }
+  }
+  document.write(" Số bé nhất trong mảng là: "+max+ " <br>")
+  document.write("Vị trí của số bé nhất đó là: "+posi)
+</script>
+
+</body>
+</html>
