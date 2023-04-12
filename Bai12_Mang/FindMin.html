@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm giá trị nhỏ nhất trong mảng và vị trí của nó</title>
+</head>
+<body>
+<script>
+    let a = [7,3,1,5,9]
+    let min = a[0]
+    let posi =0
+    for (let i=0;i<a.length;i++)
+    {
+        if (min>=a[i]) {
+        min = a[i]
+        posi = i }
+    }
+    document.write(" Số bé nhất trong mảng là: "+min+ " <br>")
+    document.write("Vị trí của số bé nhất đó là: "+posi)
+</script>
+</body>
+</html>
