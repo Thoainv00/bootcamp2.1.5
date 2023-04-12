@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lai suat ngan hang</title>
+</head>
+<body>
+<script>
+    let vay = parseInt(prompt("Nhập số tiền bạn vay: "))
+    let thang = parseInt(prompt("Nhập số tháng bạn vay: "))
+    let x = parseFloat(prompt("Nhập lãi suất hàng tháng: "))
+    let vay1 = 0
+    let i
+    for (i = 1; i <= thang; i++) {
+        vay1 = (vay) * x
+        vay = vay + vay1
+        console.log(vay1)
+        console.log(vay)
+    }
+    console.log("số tiền bạn phải đóng sau " + thang + " tháng vay là: " + vay)
+</script>
+</body>
+</html>
