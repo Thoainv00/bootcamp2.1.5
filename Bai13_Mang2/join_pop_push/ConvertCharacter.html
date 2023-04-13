@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi chữ thường sang chữ hoa</title>
+</head>
+<body>
+<script>
+    // let a = String.fromCharCode(80)
+    // let Ufirst = "A".charCodeAt(0)
+    // let Ulast = "Z".charCodeAt(0)
+    // let Nfirst = "a".charCodeAt(0)
+    // let Nlast = "z".charCodeAt(0)
+    // document.write(Ufirst,Ulast,Nfirst,Nlast)
+
+    let Str = prompt("Nhập chuỗi cần chuyển đổi: ")
+    let Str1 = []
+
+    for (let i = 0; i < Str.length; i++) {
+        if ((Str[i].charCodeAt(0) >= 65) && (Str[i].charCodeAt(0) <= 90))
+            Str1 += String.fromCharCode(Str[i].charCodeAt(0) + 32)
+        else if ((Str[i].charCodeAt(0) >= 97) && (Str[i].charCodeAt(0) <= 122))
+            Str1 += String.fromCharCode(Str[i].charCodeAt(0) - 32)
+        else Str1 += Str[i]
+        // document.write(String.fromCharCode(Str[i].charCodeAt(0)+32))
+    }
+    // let c = parseInt(Str[1].charCodeAt(0)-32)
+    // document.write(c)
+    // document.write(String.fromCharCode(c))
+
+    document.write("Chuỗi bạn vừa nhập: " + Str + " <br>")
+    document.write("Chuỗi đã được chuyển đổi: " + Str1)
+
+
+</script>
+</body>
+</html>
+

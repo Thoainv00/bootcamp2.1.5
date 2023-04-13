@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sử dụng Join</title>
+</head>
+<body>
+<script>
+    let num = prompt("Nhập vào một số: ")
+    let len = num.length
+    let a = []
+    for (let i = 0; i < num.length; i++) {
+        if ((num[i] % 2 == 0) && (num[i + 1] % 2 == 0))
+            a += num[i] + "-"
+        else a += num[i]
+    }
+    console.log(a)
+
+</script>
+</body>
+</html>
