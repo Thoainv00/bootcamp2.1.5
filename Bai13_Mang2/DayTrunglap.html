@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo dãy số không trùng lặp</title>
+</head>
+<body>
+<script>
+    let arrO = [1, 2, 5, 1, 6, 5]
+    let arrN = [arrO[0]]
+    let check
+    for (let i = 1; i < arrO.length; i++) {
+        check = true
+        for (let j = 0; j < arrN.length; j++)
+            if (arrO[i] == arrN[j]) {
+                check = false
+                break
+            }
+        if (check == true)
+            arrN.push(arrO[i])
+    }
+    alert(arrN)
+
+</script>
+</body>
+</html>

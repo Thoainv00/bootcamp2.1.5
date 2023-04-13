@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số lớn thứ 2 trong mảng</title>
+</head>
+<body>
+<script>
+    let a = [10, 5, 10, 9]
+
+    let max = a[0]
+    let min = a[0]
+    let result
+    // let min = 0
+
+
+    for (let i = 1; i < a.length; i++) {
+        if (max <= a[i])        //Tìm max
+            max = a[i]
+        if (min >= a[i])        //Tìm min
+            min = a[i]
+    }
+    alert("giá trị lớn nhất trong mảng: " + max)
+    alert("giá trị nhỏ nhất trong mảng: " + min)
+    let sub = max - min         // hiệu lớn nhất giữa max và min
+    result = 0                  // gán vị trí của số lớn thứ 2
+    for (let j = 0; j < a.length; j++)      //duyệt các phần tử trong mảng a
+        if (sub >= (max - a[j])) {          //tìm hiệu nhỏ nhất giữa max so với các phần tử trong mang
+            if (max != a[j]) {              //điều kiện hiệu nhỏ nhất khi max khác phần tử được duyệt
+                sub = max - a[j]            //gán vị trí của số lớn thứ 2 là vị trí của phần tử được duyệt
+                result = j
+            }
+        }
+    alert("Vị trí của số lớn thứ 2 trong mảng là: "+result)
+    // alert(min)
+    alert("Giá trị lớn thứ hai trong mảng: " + a[result])
+
+</script>
+</body>
+</html>
