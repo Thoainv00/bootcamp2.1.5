@@ -5,16 +5,38 @@
     <title>Từ điển</title>
 </head>
 <body>
-<input type="text" id="In" onchange="f()">
-<input id="Result" type="text">
+
+<!--<input type="text" id="In" onchange="f()">-->
+<!--<p id="Result"> </p>-->
 <script>
-    function f() {
-let a =document.querySelector("#In").value
+    let Eng = ["banana", "apple"]
+    let Vn = ["chuối", "táo"]
+    let a = prompt("Nhập từ muốn tra: ")
+    let check
+    let posi
 
-        alert(a)
-
- document.querySelector("#Result").innerHTML = a ;
+    for (let i = 0; i < Eng.length; i++) {
+        check = true
+        if (a.toUpperCase() === Eng[i].toUpperCase()) {
+            check = false
+            posi = i
+            break
+        }
     }
+    // alert(check)
+    alert("Từ bạn vừa nhập là: " + a)
+    if (check = false)
+        alert("Từ đó có nghĩa là: " + Vn[posi])
+    else alert("Không tìm thấy từ cần tra!")
+
+
+    // function f() {
+    // let a =document.getElementById("In").value
+    //
+    //         alert(a)
+    //
+    //  document.getElementById("Result").innerHTML = a ;
+    //     }
 
 
 </script>
