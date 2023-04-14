@@ -1,10 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Kiểm tra phần tử có thuộc mảng hay không</title>
 </head>
 <body>
-$END$
+<script>
+    //sinh mảng ngẫu nhiên với những phần tử khác nhau
+    let len = prompt("Bạn muốn tạo mảng ngẫu nhiên với bao nhiêu phần tử? ")
+    let arr = []
+    let num
+    for (let i = 0; i < len; i++) {
+        for (let k = 0; k >= 0; k++) {
+            num = Math.floor(Math.random() * 10)
+            let check = true
+            for (let j = 0; j < arr.length; j++)
+                if (num === arr[j]) {
+                    check = false
+                    break
+                }
+            if (check) {
+                arr.push(num)
+                // alert(arr[i])
+                break
+            }
+        }
+    }
+    document.write("Mảng được tạo là: " + arr.toString() + " <br>")
+
+    //Nhập số V từ cửa sổ prompt
+    let V = parseInt(prompt("Nhập số nguyên V cần kiểm tra: "))
+    document.write("Số nguyên V được nhập là: " + V + " <br>")
+
+    //Kiểm tra V có xuất hiện trong mảng đã tạo hay không posi[i]-i arr.length - 1
+    let count = 0
+    let posi = []
+    let j = 0
+    for (let i = 0; i < arr.length; i++)
+        if (V == arr[i]) {
+            count += 1
+            posi.push(i)
+        }
+    // document.write("số lần xuất hiện: " + count+"<br>")
+    // document.write("Vị trí xuất hiện: " + posi+"<br>")
+    if (count == 0)
+        document.write("Số " + V + " không xuất hiện trong mảng.")
+    else {
+        document.write("Số " + V + " có xuất hiện trong mảng" + "<br>")
+        document.write("Số lần xuất hiện: " + count + "<br>")
+        document.write("Vị trí xuất hiện: " + posi + "<br>")
+        for (let i = 0; i < count; i++) {
+            for (let j = posi[i] - i; j < arr.length - 1; j++)
+                arr[j] = arr[j + 1]
+            arr[arr.length - 1 - i] = 0
+            // document.write( posi[i] + "<br>")
+            document.write("Mảng đã được xóa số " + V + ": " + arr.toString() + "<br>")
+
+        }
+
+    }
+
+
+</script>
 </body>
 </html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ghép mảng</title>
+</head>
+<body>
+<script>
+    // Sinh 2 mảng ngẫu nhiên
+    let a = new Array(10)
+    let b = new Array(10)
+    let c
+    for (let i = 0; i < a.length; i++) {
+        a[i] = Math.floor(Math.random() * 100)
+        b[i] = Math.floor(Math.random() * 100)
+    }
+
+    c = a.concat(b)
+    document.write("Mảng a: " + a + "<br>")
+    document.write("Mảng b: " + b + "<br>")
+    document.write("Mảng c: " + c + "<br>")
+</script>
+
+</body>
+</html>

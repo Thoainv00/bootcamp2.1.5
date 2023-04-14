@@ -1,10 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Đếm số nguyên âm trong chuỗi</title>
 </head>
 <body>
-$END$
+<!--<input placeholder="Nhập số vào đây">-->
+<!--<button type="button" ></button>-->
+<script>
+    let count = 0
+    let arr = []
+    alert("Nhập chuỗi số của bạn vào đây!")
+    let str = prompt("mỗi phần tử ngăn cách bằng dấu phẩy (,) và kết thúc bởi dấu chấm (.): ")
+    // while (str[str.length - 1] !== ".") {
+    //     alert("Chuỗi bạn vừa nhập là: " + str + " không được kết thúc bởi dấu chấm, hãy nhập lại!")
+    //     str = prompt("Đảm bảo nhập chuỗi số với các phần tử ngăn cách bởi dấu phẩy và kết thúc bởi dấu chấm: ")
+    // }
+    // let str = prompt("mỗi phần tử ngăn cách bằng dấu phẩy (,): ")
+    let j = 0
+    let k = 0
+    let i
+    // tạo mảng từ chuỗi số đã nhập bằng hàm slice
+    document.write("Chuỗi bạn đã nhập là: " + str + "<br>")
+
+    for (i = 0; i <= str.length; i++) {
+        if (str[i] === "," || i == str.length){
+            arr[j] = parseFloat(str.slice(k, i))
+            j++
+            k = i + 1
+        }
+    }
+    for (let m = 0; m < arr.length; m++)
+        if (arr[m] < 0) {
+            count += 1
+        }
+
+    // let arr1 = str.split(",")
+    // // console.log(arr1)
+    // for (let l = 0; l < arr1.length; l++) {
+    //     if (parseInt(arr1[l]) < 0) count += 1
+    // }
+
+
+    document.write(arr + "<br>")
+    document.write("Số phần tử nguyên âm trong chuỗi đã nhập là: " + count)
+
+
+</script>
 </body>
 </html>

@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Tạo mảng và đảo ngược mảng</title>
 </head>
 <body>
-$END$
+<script>
+    let index = parseInt(prompt("Nhập số lượng phần tử trong mảng:"))
+    let arr = new Array(index)
+    for (let i = 0; i < arr.length; i++)
+        arr[i] = Math.floor(Math.random() * 100)
+    document.write("Mảng vừa được khởi tạo là: " + arr + "<br>" + "<br>")
+
+    let c
+    for (let i = 0; i < arr.length / 2; i++) {
+        c = arr[arr.length - 1 - i]
+        arr[arr.length - 1 - i] = arr[i]
+        arr[i] = c
+    }
+    document.write("Mảng nghịch đảo của bạn là: " + arr)
+
+</script>
 </body>
 </html>

@@ -1,10 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Kiểm tra phần tử có thuộc mảng hay không</title>
 </head>
 <body>
-$END$
+<script>
+    //sinh mảng ngẫu nhiên với những phần tử khác nhau
+    let len = prompt("Bạn muốn tạo mảng ngẫu nhiên với bao nhiêu phần tử? ")
+    let arr = []
+    let num
+    for (let i = 0; i < len; i++) {
+        for (let k = 0; k >= 0; k++) {
+            num = Math.floor(Math.random() * 100)
+            let check = true
+            for (let j = 0; j < arr.length; j++)
+                if (num === arr[j]) {
+                    check = false
+                    break
+                }
+            if (check) {
+                arr.push(num)
+                // alert(arr[i])
+                break
+            }
+        }
+    }
+    document.write("Mảng được tạo là: " + arr.toString() + " <br>")
+
+    //Sinh số V ngẫu nhiên
+    let V = Math.floor(Math.random() * 100)
+    document.write("Số nguyên V được tạo là: " + V + " <br>")
+
+    //Kiểm tra V có xuất hiện trong mảng đã tạo hay không
+    let check1 = true
+    for (let i = 0; i < arr.length; i++)
+        if (V == arr[i]) {
+            document.write("Số V có xuất hiện trong mảng.")
+            check1 = false
+            break
+        }
+    if (check1)
+        document.write("Số V không xuất hiện trong mảng.")
+
+
+</script>
 </body>
 </html>

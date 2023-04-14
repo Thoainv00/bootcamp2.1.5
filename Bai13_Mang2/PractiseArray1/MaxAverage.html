@@ -1,10 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Tim max va average</title>
 </head>
 <body>
-$END$
+<script>
+    let index = parseInt(prompt("bạn muốn tạo dãy số nguyên có bao nhiêu phần tử?"))
+    let arr = new Array(index)
+    let max = 0
+    let Avr
+    let sum = 0
+
+    for (let i = 0; i < arr.length; i++)
+        arr[i] = Math.floor(Math.random() * 100)
+    document.write("Mảng vừa được khởi tạo là: " + arr + "<br>" + "<br>")
+
+    for (let i = 0; i < arr.length; i++) {
+        if (max <= arr[i])
+            max = arr[i]
+        sum += arr[i]
+    }
+    Avr = sum / index
+    document.write("Phần tử có giá trị lớn nhất trong mảng là: " + max + "<br>")
+    document.write("Giá trị trung bình của mảng là: " + Avr)
+
+
+</script>
 </body>
 </html>

@@ -1,10 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Tìm phần tử lớn nhất của mảng không trùng lặp</title>
 </head>
 <body>
-$END$
+<script>
+    let arr = []
+    let num
+    for (let i = 0; i < 10; i++) {
+        for (let k = 0; k >= 0; k++) {
+            num = Math.floor(Math.random() * 10)
+            let check = true
+            for (let j = 0; j < arr.length; j++)
+                if (num === arr[j]) {
+                    check = false
+                    break
+                }
+            if (check) {
+                arr.push(num)
+                // alert(arr[i])
+                break
+            }
+        }
+    }
+    // mảng đánh dấu
+    // let danhdau = new Array(10)
+    // while(arr.length < 10) {
+    //     let num = Math.floor(Math.random() * 10)
+    //     if(danhdau[num] != 1) {
+    //         arr.push(num)
+    //         danhdau[num] = 1
+    //     }
+    // }
+    document.write("Các phần tử của mảng được sinh ra là: " + arr.toString() + "<br>")
+    // document.write(arr.length)
+    let max = arr[0]
+    let posi = 0
+    for (let i = 1; i < arr.length; i++)
+        if (max <= arr[i]) {
+            max = arr[i]
+            posi = i
+        }
+    document.write("Số lớn nhất trong mảng là: " + max + "<br>")
+    document.write("Số lớn nhất nằm ở trị trí thứ " + (posi + 1) + " trong mảng")
+</script>
 </body>
 </html>
