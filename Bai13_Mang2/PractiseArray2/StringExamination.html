@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra chuỗi giống nhau</title>
+</head>
+<body>
+<script>
+    let str = prompt("Nhập chuỗi thứ nhất: ")
+    document.write("Chuỗi thứ nhất là: " + str + "<br>")
+    let str2 = prompt("Nhập chuỗi thứ 2: ")
+    document.write("Chuỗi thứ hai là: " + str2 + "<br>")
+    if (str.length == str2.length) {
+        let check = true
+        for (let i = 0; i < str.length; i++)
+            if (str[i] !== str2[i]) {
+                check = false
+                document.write("Chuối 1 khác chuỗi 2.")
+                break
+            }
+        if (check) document.write("Chuỗi 1 giống chuỗi 2.")
+    } else document.write("Chuối 1 khác chuỗi 2.")
+</script>
+</body>
+</html>
