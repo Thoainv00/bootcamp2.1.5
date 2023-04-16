@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Truyền mảng vào hàm</title>
+</head>
+<body>
+<script>
+    let index = prompt("Nhập số phần tử của mảng muốn tạo: ")
+    let arr = new Array(index)
+    for (let i = 0; i < index; i++)
+        arr[i] = Math.floor(Math.random() * 100)
+    document.write("Mảng vừa tạo là: " + arr + "<br>")
+
+    function FindMin(arr) {
+        let min
+        if (arr.length == 0) min = -1
+        else {
+            min = arr[0]
+            for (let i = 1; i < arr.length; i++)
+                if (min >= arr[i]) {
+                    min = arr[i]
+                }
+        }
+        return min
+    }
+
+    document.write("Giá trị nhỏ nhất của mảng là " + FindMin(arr))
+</script>
+</body>
+</html>
