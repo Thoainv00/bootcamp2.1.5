@@ -7,9 +7,9 @@
 <body>
 <script>
     let index = prompt("Nhập số phần tử của mảng muốn tạo: ")
-    let arr = new Array(index)
+    let arr = []
     for (let i = 0; i < index; i++)
-        arr[i] = Math.floor(Math.random() * 100)
+        arr.push(Math.floor(Math.random() * 100))
     document.write("Mảng vừa tạo là: " + arr + "<br>")
 
     function FindMin(arr) {
