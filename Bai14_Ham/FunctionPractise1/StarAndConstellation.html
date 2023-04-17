@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sao và chòm sao</title>
+</head>
+<body>
+<p>The
+    <span id="sta"></span>
+    is a star of the
+    <span id="constellation"></span>
+    contellation</p>
+<script>
+    let star = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"]
+    let contellation = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"]
+
+    // name = nameofstar.value
+
+    FindStar()
+
+
+    function FindStar() {
+        // nameofstar = document.querySelector("#star").value
+        let name = prompt("Enter your star: ")
+        // document.querySelector("#sta").innerHTML = name
+        console.log(name)
+        let check
+        let posi
+        for (let i = 0; i < star.length; i++) {
+            check = true
+            if (name.toUpperCase() === star[i].toUpperCase()) {
+                check = false
+                posi = i
+                break
+            }
+        }
+        // alert(check)
+        // alert(posi)
+        // alert(contellation[posi])
+        // alert(name.toLowerCase())
+        if (check)
+            document.write("There are no star like your star.")
+        else {
+            document.querySelector("#sta").innerHTML = star[posi]
+            document.querySelector("#constellation").innerHTML = contellation[posi]
+        }
+    }
+</script>
+</body>
+</html>

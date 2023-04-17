@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tăng lên 1 đơn vị</title>
+</head>
+<body>
+<input id="number" placeholder="Number">
+<button type="button" onclick="Increaseby1()">Click</button>
+<script>
+
+    function Increaseby1(num) {
+        num = parseInt(document.querySelector("#number").value)
+        num += 1
+        alert("Your result: " + num)
+    }
+</script>
+</body>
+</html>
