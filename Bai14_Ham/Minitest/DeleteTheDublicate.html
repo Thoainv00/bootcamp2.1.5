@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xoa phan tu trong day co trung lap</title>
+</head>
+<body>
+<!--<input id="Input" placeholder="Nhập số ">-->
+<!--<button type="button" onclick="add()">Nhập</button>-->
+<!--<button type="button" onclick="">ok</button>-->
+<!--<p id="Result">Kết quả:</p>-->
+
+<script>
+    let num = parseInt(prompt(" Nhập giá trị muốn xóa: "))
+    let arr = [1, 2, 3, 4, 5, 3, 4, 2]
+    let count = 0
+    for (let i = 0; i < arr.length; i++)
+        if (num == arr[i]) count += 1
+    let arr1 = new Array(arr.length - count)
+    count = 0
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] !== num) arr1[count++] = arr[i]
+    }
+    document.write("Mang da xoa la: "+arr1)
+
+
+</script>
+</body>
+</html>

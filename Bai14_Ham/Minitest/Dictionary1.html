@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tu dien</title>
+</head>
+<body>
+<script>
+  let arr1 = ["banana","apple","orange"]
+  let arr2 = ["chuối","táo","cam"]
+  let word = prompt("Nhập từ cần kiểm tra: ")
+  document.write("Từ bạn vừa nhập là: "+word+"<br>")
+  let check=false
+  let posi
+  for (let i = 0;i<arr1.length;i++) {
+    if (word.toUpperCase() === arr1[i].toUpperCase()) {
+      check=true
+      posi = i
+      break
+    }
+  }
+  if (check) document.write("Nghĩa tiếng Việt là: "+arr2[posi])
+  else document.write("Không tìm thấy từ cần tra")
+</script>
+</body>
+</html>
