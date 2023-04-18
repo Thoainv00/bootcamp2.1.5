@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số nguyên nhỏ nhất</title>
+</head>
+<body>
+<script>
+    let arr = []
+    arr[0] = parseInt(prompt("Nhập số thứ 1: "))
+    let Min = arr[0]
+    for (let i = 1; i < 3; i++) {
+        arr[i] = prompt("Nhập số thứ " + i + 1)
+        Min = CheckMin(arr[i])
+    }
+    document.write("Số nhỏ nhất là: " + Min)
+
+
+    function CheckMin(x) {
+
+        if (Min >= x) Min = x
+        return Min
+    }
+</script>
+</body>
+</html>

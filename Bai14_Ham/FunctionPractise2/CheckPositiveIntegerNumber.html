@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số nguyên dương</title>
+</head>
+<body>
+<script>
+    let num = prompt("Enter your number: ")
+
+    function checkPositiveIntegerNumber(x) {
+        if (parseInt(x))
+            if (parseInt(x) > 0) return true
+            else return false
+        else return false
+    }
+
+    document.write(num + " is a positive integer number? " + checkPositiveIntegerNumber(num))
+</script>
+</body>
+</html>

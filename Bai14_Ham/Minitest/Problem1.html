@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find the third highest score</title>
+</head>
+<body>
+<script>
+    let score = [4, 2, 1, 5, 7, 4, 3, 5, 8, 5, 10, 9, 9, 7]
+    let max = score[0]
+    let min = score[0]
+    let posi
+    let the3rdhighestcore
+    for (let i = 0; i < score.length; i++)
+        if (max <= score[i]) max = score[i]
+    for (let i = 0; i < score.length; i++)
+        if (max == score[i]) score[i] = 0
+    max = score[0]
+
+    // for (let i = 0; i < 2; i++)
+    the3rdhighestcore = score[findthe3rdscore(score)]
+    document.write("mảng điểm: " + score + "<br>")
+    document.write("Điểm cao thứ 3 là: " + the3rdhighestcore)
+
+    function findthe3rdscore(x) {
+        for (let i = 0; i < x.length; i++) {
+            if (max <= x[i]) max = x[i]
+            if (min >= x[i]) min = x[i]
+        }
+        let sub = max - min
+        posi = 0
+        for (let j = 0; j < x.length - 1; j++)
+            if (sub > (max - x[j])) {
+                if (max != x[j]) {
+                    sub = max - x[j]
+                    posi = j
+                }
+            }
+        return posi
+
+
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Kiểm tra ký tự nhập vào có trong mảng hay k</title>
+</head>
+<body>
+<script>
+    let index = parseInt(prompt("Nhập số lượng phần tử của mảng: "))
+    let arr = []
+    for (let i = 0; i < index; i++) {
+        arr[i] = prompt("Nhập ký tự thứ " + (i + 1))
+    }
+    document.write("Chuỗi ký tự vừa nhập là: " + arr.toString() + "<br>")
+
+    let sym = prompt("Nhập ký tự muốn kiểm tra: ")
+    document.write(("Ký tự muốn kiểm tra là: " + sym + "<br>"))
+
+    function checksymbol(x, y) {
+        count = 0
+        for (let i = 0; i < y.length; i++)
+            if (x === y[i]) count += 1
+        if (count) return count
+        else return -1
+    }
+
+    document.write(checksymbol(sym, arr))
+</script>
+</body>
+</html>

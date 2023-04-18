@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra ký tự số</title>
+</head>
+<body>
+<script>
+    let symbol = prompt("Enter your symbol: ")
+
+    function checkNumber(x) {
+        let check
+        if (parseFloat(x)) check = true
+        else check = false
+        return check
+    }
+
+    document.write(' "' + symbol + '" is a number? ' + checkNumber(symbol))
+</script>
+</body>
+</html>

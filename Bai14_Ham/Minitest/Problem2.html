@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    let x = prompt("Nhập số phần tử của mảng: ")
+    let a = []
+    for (let i = 0; i < x; i++) {
+        a[i] = parseInt(prompt("Nhập phần tử số: " + i))
+    }
+    // document.write("Mảng vừa tạo là: " + a + "<br>")
+    let index = parseInt(prompt("Nhập vị trí muốn xóa: "))
+
+    if ((index < 0) || (index > x - 1))
+        document.write("Mảng vừa tạo là: " + a + "<br>")
+    else {
+        for (let i = index; i < x - 1; i++)
+            a[i] = a[i + 1]
+        a.pop()
+        document.write("Mảng đã được xóa: " + a)
+    }
+
+
+</script>
+</body>
+</html>
