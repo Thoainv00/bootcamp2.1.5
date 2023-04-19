@@ -8,22 +8,22 @@
 <script>
     function isPalindrom(arr, i) {
         if (i > (arr.length / 2 - 1)) {
-            return true
-        }
+            return true;
+        };
         if (arr[i] === arr[arr.length - i - 1]) {
-            return isPalindrom(arr, i + 1)
-        }
+           return isPalindrom(arr, i + 1);
+        };
         return false;
-    }
+    };
 
     let str = prompt("Nhập từ muốn kiểm tra: ")
     document.write("Từ bạn vừa nhập là: " + str + "<br>")
     // console.log(isPalindrom(str, 0))
     if (isPalindrom(str, 0)) {
-        console.log(isPalindrom(str, 0))
+        // console.log(isPalindrom(str, 0))
         document.write("Từ của bạn là một từ đối xứng.")
     } else {
-        console.log(isPalindrom(str, 0))
+        // console.log(isPalindrom(str, 0))
         document.write("Từ của bạn không phải là một từ đối xứng.")
     }
 
