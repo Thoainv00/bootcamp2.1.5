@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mô tả hình chữ nhật</title>
+</head>
+<body>
+<canvas id="myCanvas"  height="500px" style="border: 1px solid black"></canvas>
+<script>
+    class Rectangle {
+        width;
+        height;
+
+        constructor(width, height) {
+            this.width = width
+            this.height = height
+        }
+
+        Area() {
+            return this.width * this.height
+        }
+
+        perimeter() {
+            return 2 * (this.width + this.height)
+        }
+    }
+
+    function creatRectangle(width, height) {
+        var ctx = document.getElementById("myCanvas").getContext("2d");
+        // var color = getRandomColor();
+        // var radius = Math.floor(Math.random() * 80);
+        // var x = Math.random() * window.innerWidth;
+        // var y = Math.random() * window.innerHeight;
+        // var width = 100
+        // var height = 100
+        var canvas = document.getElementById("myCanvas")
+        canvas.width = window.innerWidth
+        var rectangle = new Rectangle(width, height);
+        ctx.moveTo(100, 100)
+        ctx.lineTo(100 + rectangle.height, 100)
+        // ctx.moveTo(100+rectangle.height,100)
+        ctx.lineTo(100 + rectangle.height, 100 + rectangle.width)
+        // ctx.moveTo(100+rectangle.height,100+rectangle.width)
+        ctx.lineTo(100, 100 + rectangle.width)
+        // ctx.moveTo(100,100+rectangle.width)
+        ctx.lineTo(100, 100)
+        // ctx.moveTo(100,100)
+        // ctx.fillStyle
+        ctx.fill()
+
+        ctx.stroke
+    }
+
+    let myrectangle = new Rectangle(150, 370)
+    document.write("diện tích hình chữ nhật là: " + myrectangle.Area() + "<br>")
+    document.write("chu vi hình chữ nhật là: " + myrectangle.perimeter())
+    creatRectangle(myrectangle.width, myrectangle.height)
+
+</script>
+</body>
+</html>

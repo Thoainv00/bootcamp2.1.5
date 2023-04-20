@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature</title>
+</head>
+<body>
+<script>
+  class Temperature {
+    degree;
+    constructor(degree) {
+      this.degree=degree
+    }
+    // getdegree() {
+      // return this.degree
+    // }
+    setdegree(degree) {
+      this.degree = degree
+    }
+    Fahrenheit() {
+      return 1.8*this.degree+32
+    }
+    Kenvin() {
+      return this.degree+273
+    }
+  }
+  let doC=new Temperature(273)
+  doC.setdegree(25)
+  document.write("Độ F tương ứng là: "+doC.Fahrenheit()+"<br>")
+  document.write("Độ K tương ứng là: "+doC.Kenvin())
+</script>
+</body>
+</html>
