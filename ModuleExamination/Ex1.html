@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex1</title>
+</head>
+<body>
+<script>
+    let arrScore = [1, 2, 1, 3, 5, 10, 5];
+
+    function findAvg(arr) {
+        let sum = 0;
+        for (let i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+        let avrScore = sum / arr.length;
+        return avrScore;
+    };
+    document.write("The average score is: " + findAvg(arrScore).toFixed(2))
+</script>
+</body>
+</html>

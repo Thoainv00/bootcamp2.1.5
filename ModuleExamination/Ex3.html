@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex3</title>
+</head>
+<body>
+<script>
+    let x = parseInt(prompt("Enter your number: "))
+
+    function sumOfListPrime(num) {
+        let sum = 0
+        for (let i = 2; i <= num; i++)
+            if (prime(i)) sum += i;
+        return sum;
+    }
+
+    function prime(number) {
+        let check = true;
+        for (let i = 2; i < number; i++)
+            if (number % i == 0)
+                check = false;
+        return check;
+    }
+
+    document.write("Sum of primes from 0 to " + x + " is: " + sumOfListPrime(x))
+</script>
+</body>
+</html>
